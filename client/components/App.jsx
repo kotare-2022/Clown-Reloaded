@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Count: {count}</h1>
+      <h1>Counts!: {count}</h1>
       <button onClick={() => setCount(count + 1)}>Click me!</button>
       <Routes>
         <Route path='/test' element={<h1>TEST ROUTE</h1>} />
