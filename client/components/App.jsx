@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { HotModuleReplacementPlugin } from 'webpack'
+
+
 
 const App = () => {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <div>
-      <h1>Counts!: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Click me!</button>
+     
       <Routes>
-        <Route path='/test' element={<h1>TEST ROUTE</h1>} />
+        <Route path='/' element={<Home/>} />
+        <Route path='/outfit'element={<Outfit/>} />
+        <Route path='/clownResult'element={<ClownResult/>} />
       </Routes>
+
     </div>
   )
 }
