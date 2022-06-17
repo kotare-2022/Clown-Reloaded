@@ -14,7 +14,6 @@ function ClownHead() {
 
 
   const leftClick = (index) => {
-    // setHead(nextHead(head))
     console.log(index)
     if (index === 0 ){
       return 5
@@ -24,7 +23,6 @@ function ClownHead() {
   }
 
   const rightClick = (index) => {
-    console.log(`we called right click :`, index)
     if (index === 5){
       return 0
     } else {
