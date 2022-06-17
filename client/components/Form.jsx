@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 
 
 function Form() {
-const [name, setName] = useState({
-  name: ''
-}
-)
+  
+const [name, setName] = useState('')
 
 const handleTyping = (e) => {
   setName(e.target.value)

@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 // function
 function ClownHead() {
 
+  const curretHead = useReff()
   const [ head, setHead ] = useState('head0')
-  cosnt 
 
   const clownHeads = [
     'head0', 'head1', 'head2', 'head3', 'head4', 'head5'
@@ -30,12 +30,12 @@ function ClownHead() {
 
   return (
     <>
-      <button onClick={leftClick}>text</button>
+      <button onClick={leftClick}>LEFT</button>
 
       {/* {'/images/' + head + '.png'} */}
       <img src={`/images/${head}.png`} alt="clown head" />
       
-      <button>text</button>
+      <button>RIGHT</button>
 
       <button>Submit</button>
 
