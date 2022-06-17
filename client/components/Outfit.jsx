@@ -2,6 +2,7 @@
 import React from 'react'
 import ClownHead from './ClownHead'
 import ClownBody from './ClownBody'
+import ClownShoes from './ClownShoes'
 
 // function
 function Outfit() {
@@ -9,6 +10,7 @@ function Outfit() {
     <main>
      <ClownHead />
      <ClownBody />
+     <ClownShoes />
     </main>
   )
 }
