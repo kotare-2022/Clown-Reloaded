@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 
 function Form() {
-return <p>I am the form</p>
+const [name, setName] = useState({
+  name: ''
+}
+)
+
+const handleTyping = (e) => {
+  setName(e.target.value)
+  console.log(name)
+
+}
+const handleSubmit = (e) => {
+  alert('Lets dress (name) up' )
+  setName('')
+  // send name to outfit//
+}
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <label>Your Clown's Name:
+          <input onChange={handleTyping} name= {name} type= 'text'/>
+        </label>
+        <button>Leshgooo!</button>
+
+      </form>
+    </>
+  )
 }
 
 export default Form
