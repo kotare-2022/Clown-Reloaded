@@ -10,8 +10,6 @@ import Footer from './Footer'
 
 
 
-
-
 const App = () => {
   
 
