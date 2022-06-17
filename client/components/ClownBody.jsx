@@ -32,14 +32,26 @@ function ClownBody() {
     <>
       <h2>We are dressing: {`${params.name}`}</h2>
 
-      <button onClick={() => {setBodyIndex(leftClick)}}>
+      <button className="button-63" onClick={() => {setBodyIndex(leftClick)}}>
         LEFT
       </button>
+
+
+
       <img src={`/images/${body}.png`} alt="clown head" />
-      <button onClick={() => {setBodyIndex(rightClick)}}>
+
+
+      <button className="button-63" onClick={() => {setBodyIndex(rightClick)}}>
         RIGHT
       </button>
-      <div></div>
+
+
+
+  
+
+
+
+      <button type ="submit">Submit</button>
 
     </>
   )
