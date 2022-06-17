@@ -9,11 +9,11 @@ const [name, setName] = useState('')
 const handleTyping = (e) => {
   setName(e.target.value)
 }
-const handleSubmit = (e) => {
-  alert('Lets dress (name) up' )
-  setName('')
-  // send name to outfit//
-}
+// const handleSubmit = (e) => {
+//   alert('Lets dress (name) up' )
+//   setName('')
+//   // send name to outfit//
+// }
   return (
     <>
       {/* <form onSubmit={handleSubmit}> */}

@@ -1,52 +1,50 @@
 // Import React
-import React, { useState, useReff, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 // function
 function ClownHead() {
   const params = useParams()
-  console.log(`This is the params `, params.name) 
-  // const curretHead = useReff()
-  const [ head, setHead ] = useState('head0')
-
+  const [headIndex, setHeadIndex] = useState(0)
   const clownHeads = [
     'head0', 'head1', 'head2', 'head3', 'head4', 'head5'
   ]
+  const head = clownHeads[headIndex]
 
-  // const nextHead = () => {
-  //   clownHeads(() => {
-  //     if (index === 0) {
-  //       console.log(`head to show: `, element)
-  //       return clownHeads[5]
-  //     } else {
-  //       console.log(`head to show: `, element)
-  //       return clownHeads[index - 1]
-  //     }
-  //   })
-  // }
+
 
   const leftClick = (index) => {
     // setHead(nextHead(head))
     console.log(index)
-    if (head == 'head0'){
-      return 'head5'
+    if (index === 0 ){
+      return 5
     } else {
-      return clownHeads[index-1]
+      return index - 1
     }
   }
 
+  const rightClick = (index) => {
+    console.log(`we called right click :`, index)
+    if (index === 5){
+      return 0
+    } else {
+      return index + 1
+    }
+  }
 
   return (
     <>
       <h2>We are dressing: {`${params.name}`}</h2>
-      <button onClick={() => {setHead(leftClick(head[4]))}}>LEFT</button>
 
-      {/* {'/images/' + head + '.png'} */}
+      <button onClick={() => {setHeadIndex(leftClick)}}>
+        LEFT
+      </button>
       <img src={`/images/${head}.png`} alt="clown head" />
-      
-      <button>RIGHT</button>
-
-      <button>Submit</button>
+      <button onClick={() => {setHeadIndex(rightClick)}}>
+        RIGHT
+      </button>
+      <div></div>
+      <button type ="submit">Submit</button>
 
     </>
   )
