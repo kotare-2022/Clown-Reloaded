@@ -3,17 +3,19 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 // function
-function ClownBody() {
+function ClownShoes() {
   const params = useParams()
-  const [ bodyIndex, setBodyIndex ] = useState(0)
-  const clownBodies = [
-    'body0', 'body1', 'body2', 'body3', 'body4', 'body5'
+  const [shoesIndex, setShoesIndex] = useState(0)
+  const clownShoes = [
+    'shoes0', 'shoes1', 'shoes2', 'shoes3', 'shoes4', 'shoes5'
   ]
-  const body = clownBodies[bodyIndex]
+  const shoes = clownShoes[shoesIndex]
+
+
 
   const leftClick = (index) => {
     console.log(index)
-    if (index === 0){
+    if (index === 0 ){
       return 5
     } else {
       return index - 1
@@ -32,14 +34,15 @@ function ClownBody() {
     <>
       <h2>We are dressing: {`${params.name}`}</h2>
 
-      <button onClick={() => {setBodyIndex(leftClick)}}>
+      <button onClick={() => {setShoesIndex(leftClick)}}>
         LEFT
       </button>
-      <img src={`/images/${body}.png`} alt="clown head" />
-      <button onClick={() => {setBodyIndex(rightClick)}}>
+      <img src={`/images/${shoes}.png`} alt="clown shoes" />
+      <button onClick={() => {setShoesIndex(rightClick)}}>
         RIGHT
       </button>
       <div></div>
+      <button type ="submit">Submit</button>
 
     </>
   )
@@ -47,4 +50,4 @@ function ClownBody() {
 
 
 // export
-export default ClownBody
+export default ClownShoes
