@@ -36,16 +36,34 @@ function ClownHead() {
     <>
       <h2>We are dressing: {`${params.name}`}</h2>
 
-      <button onClick={() => {setHeadIndex(leftClick)}}>
+
+      <div className='button-container'>
+
+      
+      <button className="button-63" onClick={() => {setHeadIndex(leftClick)}}>
         LEFT
       </button>
-      <img src={`/images/${head}.png`} alt="clown head" />
-      <button onClick={() => {setHeadIndex(rightClick)}}>
-        RIGHT
-      </button>
-      <div></div>
-      <button type ="submit">Submit</button>
 
+
+
+
+      <img src={`/images/${head}.png`} alt="clown head" />
+     
+      <button className="button-63" onClick={() => {setHeadIndex(rightClick)}}>
+        RIGHT
+
+      </button>
+
+        
+   
+
+      </div>
+
+     <div className='button-container'>
+    
+        <button className="button-63" type ="submit">Submit</button>
+
+      </div>
     </>
   )
 }
