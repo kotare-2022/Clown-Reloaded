@@ -1,23 +1,22 @@
 // Import React
 import React from 'react'
-
+import ClownHead from './ClownHead'
 
 // function
 function Outfit() {
   return (
-    <>
 
     <main>
-    <p>
-      1
-    </p>
+
+     <ClownHead/>
+ 
     </main>
 
     
     
     
     
-    </>
+ 
   )
 }
 
